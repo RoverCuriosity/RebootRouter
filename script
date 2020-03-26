@@ -1,0 +1,24 @@
+set WshShell = WScript.CreateObject("WScript.Shell")
+
+WshShell.run"Telnet.exe FILL_IN_THE_IP_OF_YOUR_ROUTER"
+WScript.Sleep 1000
+
+'Provide username'
+WshShell.SendKeys"FILL_IN_THE_ADMINISTRATOR_OF_THE_ROUTER"
+WshShell.SendKeys("{Enter}")
+WScript.Sleep 1000
+
+'Provide user password'
+WshShell.SendKeys"FILL_IN_THE_ADMINISTRATOR_PASSWORD"
+WshShell.SendKeys("{Enter}")
+WScript.Sleep 1000
+
+'Reboot the router'
+WshShell.SendKeys"reboot"
+WshShell.SendKeys("{Enter}")
+WScript.Sleep 1000
+
+'Close session'
+WScript.Quit
+
+'Done and done'
